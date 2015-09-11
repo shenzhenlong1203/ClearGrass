@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{text.page_title}} - {{text.cleargrass}}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="../static/style/grass.css?var=0904">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% include 'html_head.html' %}
+</head>
+<body class="home-page">
+{% include 'amber/header.html' %}
+<section id="subscribe-detail">
+    <div class="subscribe-input-area">
+        <h2 align="center">{{text.provide_info|raw}}</h2>
+        <div class="sub-line">
+            <label class="title" id="name_label">{{text.name}}</label>
+            <div class="cot">
+                <input type="text" placeholder="{{text.name}}" class="sub-input" id="name">
+            </div>
+        </div>
+        <div class="sub-line">
+            <label class="title"id="email_label">{{text.email}}</label>
+            <div class="cot">
+                <input type="text" placeholder="{{text.hint_email_address}}" class="email-input" id="email">
+            </div>
+        </div>
+        <div class="sub-line">
+            <label class="title" id="watch_type_label">{{text.watch_type}}</label>
+            <div class="cot" id="watchType-choose">
+                <span class="type-span">{{text.watch_sport}}</span>
+                <span class="type-span">{{text.watch_watch}}</span>
+                <span class="type-span">{{text.watch_edition}}</span>
+                <input type="text" id="watchType" hidden="hidden">
+            </div>
+        </div>
+        <div class="sub-line">
+            <label class="title" id="watch_size_label">{{text.watch_size}}</label>
+            <div class="cot" id="watchSize-choose">
+                <span class="type-span">{{text.watch_size_38}}</span>
+                <span class="type-span">{{text.watch_size_42}}</span>
+                <input type="text" id="watchSize" hidden="hidden">
+            </div>
+        </div>
+        <div class="sub-line">
+            <label class="title">{{text.something_more}}<br/><span>{{text.optional}}</span></label>
+            <div class="cot">
+                <textarea placeholder="{{text.hint_your_expection}}" class="sub-textarea" id="elseTxt"></textarea>
+            </div>
+        </div>
+        <div class="sub-line">
+            <label class="title">&nbsp;</label>
+            <div class="cot">
+                <button class="subscribe-btn" id="subscribe-btn">{{text.keep_update}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="success-show">
+        <div class="success-box">
+            <img src="../static/images/success-icon.png" width="142" height="142" class="icon-suc">
+            <div class="txt"><p>Thank you very much!</p></div>
+        </div>
+    </div>
+
+</section>
+{% include 'amber/footer.html' %}
+<div class="dialog-overlay"></div>
+<script type="text/javascript" src="../static/js/subscribe.page.js"></script>
+</body>
+</html>

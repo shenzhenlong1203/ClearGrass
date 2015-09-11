@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{text.page_title}} - {{text.cleargrass}}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="../static/style/grass.css?var=0904">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% include 'html_head.html' %}
+</head>
+<body class="home-page">
+{% include 'amber/header.html' %}
+<section id="setup-detail">
+    <!--<div class="video-show">-->
+        <!--<img src="static/images/set-up-video.jpg" width="1000" height="500"/>-->
+        <!--<span class="paly"></span>-->
+    <!--</div>-->
+    <div class="show-section">
+        <h3>{{text.ambers_components|raw}}</h3>
+        <div class="img"><img src="../static/images/set-up-02.jpg" width="100%" height="auto"/></div>
+    </div>
+    <div class="show-section">
+        <h3>{{text.use_watch_cable|raw}}</h3>
+        <div class="img-slider">
+            <div class="s-content img01">
+                <p>{{text.set_up_1|raw}}</p>
+                <p><img src="../static/images/set-up-03.jpg" width="100%" height="auto"/></p>
+            </div>
+            <div class="s-content img02" >
+                <p>{{text.set_up_2|raw}}</p>
+                <p><img src="../static/images/set-up-04.jpg" width="100%" height="auto"/></p>
+            </div>
+            <div class="s-content img03">
+                <p>{{text.set_up_3|raw}}</p>
+                <p><img src="../static/images/set-up-05.jpg" width="100%" height="auto"/></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% include 'amber/footer.html' %}
+<script type="text/javascript" src="../static/js/owl.carousel.js"></script>
+<script>
+    $(function(){
+        $(".img-slider").owlCarousel({
+            items: 1,
+            autoPlay: false,
+            paginationNumbers:true,
+            itemsDesktop:[1200,1]
+
+        })
+    })
+</script>
+</body>
+</html>

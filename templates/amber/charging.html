@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{text.page_title}} - {{text.cleargrass}}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="../static/style/grass.css?var=0904">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% include 'html_head.html' %}
+</head>
+<body class="home-page">
+{% include 'amber/header.html' %}
+<section id="charging-detail">
+    <div class="charging-amber-intro1">
+        <div class="charging-amber-wrap">
+            <div class="txt">
+                <h3>{{text.charge_amber}}</h3>
+                <p>{{text.plug_usb_cable}}<br/>{{text.takes_3_hours|raw}}</p>
+            </div>
+            <div class="img"></div>
+        </div>
+
+    </div>
+    <div class="charging-amber-intro2">
+        <div class="charging-amber-wrap">
+            <div class="txt">
+                <h3>{{text.charge_watch}}</h3>
+                <p>{{text.put_watch_in}}<br/>{{text.takes_1_5_hours|raw}}</p>
+            </div>
+            <div class="img"></div>
+
+        </div>
+    </div>
+    <div class="charging-amber-intro3">
+        <div class="charging-amber-wrap">
+            <div class="txt">
+                <h3>{{text.charge_iphone}}</h3>
+                <p>{{text.plug_lighting_cable}}<br/>{{text.takes_2_5_hours|raw}}</p>
+            </div>
+            <div class="img"></div>
+        </div>
+    </div>
+    <div class="charging-amber-intro4">
+        <div class="txt">
+            <h3>{{text.amber_contains_battery}}</h3>
+            <p>{{text.amber_charge_watch_8|raw}}</p>
+            <div class="charging-img04"></div>
+            <p style="margin-top: 80px;">{{text.amber_charge_iphone_2|raw}}</p>
+            <div class="charging-img05"></div>
+        </div>
+    </div>
+    <div class="charging-amber-intro5">
+        <div class="charging-amber-wrap">
+            <div class="txt">
+                <h3>{{text.checking_remaining_power|raw}}</h3>
+            </div>
+            <div class="img"></div>
+        </div>
+
+    </div>
+</section>
+{% include 'amber/footer.html' %}
+</body>
+</html>

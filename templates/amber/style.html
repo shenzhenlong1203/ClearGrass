@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{text.page_title}} - {{text.cleargrass}}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="../static/style/grass.css?var=0904">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% include 'html_head.html' %}
+</head>
+<body class="home-page">
+{% include 'amber/header.html' %}
+<article id="amberSlider" data-toggle='slidehover'>
+    <section class="ui-panel amber01 owl-item active">
+        <div class="intro">
+            <div class="intro-innner">
+                <h2>{{text.amber}}</h2>
+                <ul>
+                    <li>&nbsp;&nbsp;{{text.power_bank}}</li>
+                    <li>&nbsp;&nbsp;{{text.case}}</li>
+                </ul>
+            </div>
+            <!--<p class="img"><img src="../static/images/retina/slider-pic01-a@2x.png" width="435" height="74"/></p>-->
+            <div class="img">
+                <p class="match-for-watch">{{text.match_for_watch|raw}}</p>
+                <p class="kick-starter">{{text.being_made|raw}}</p>
+            </div>
+        </div>
+    </section>
+    <section class="ui-panel amber02 owl-item">
+        <div class="intro">
+            <div class="intro-innner">
+                <h2>{{text.amber}}</h2>
+                <ul>
+                    <li>&nbsp;&nbsp;{{text.power_bank}}</li>
+                    <li>&nbsp;&nbsp;{{text.case}}</li>
+                </ul>
+            </div>
+            <!--<p class="img"><img src="../static/images/retina/slider-pic01-b@2x.png" width="435" height="74"/></p>-->
+            <div class="img">
+                <p class="match-for-watch">{{text.match_for_watch|raw}}</p>
+                <p class="kick-starter">{{text.being_made|raw}}</p>
+            </div>
+        </div>
+    </section>
+</article>
+<section class="hm-product hm-product-amber">
+    <h2>{{text.chage_the_way}}</h2>
+    <figure class="image-amber1"></figure>
+    <p>{{text.daily_charger|raw}}<sup><a href="#comment1"> 1</a></sup>{{text.daily_charger_2|raw}}</p>
+</section>
+<section class="hm-product hm-product-business">
+    <ul>
+        <li><a><img src="../static/images/index-bg04-a.jpg" alt="" width="100%" height="auto"/>
+            <div class="mask">
+                <span>{{text.when_charging|raw}}</span>
+                <samp></samp>
+            </div>
+        </a></li>
+        <li><a><img src="../static/images/index-bg04-b.jpg" alt="" width="100%" height="auto"/>
+            <div class="mask">
+                <span>{{text.at_night|raw}}</span>
+                <samp></samp>
+            </div>
+        </a></li>
+        <li><a><img src="../static/images/index-bg04-c.jpg" alt="" width="100%" height="auto"/>
+            <div class="mask">
+                <span>{{text.during_daytime|raw}}</span>
+                <samp></samp>
+            </div>
+        </a></li>
+        <li><a><img src="../static/images/index-bg04-d.jpg" alt="" width="100%" height="auto"/>
+            <div class="mask">
+                <span>{{text.when_take_break|raw}}</span>
+                <samp></samp>
+            </div>
+        </a></li>
+    </ul>
+</section>
+<section class="hm-product hm-product-iphone clearfix">
+    <div class="txt">{{text.can_charge_iphone|raw}} </div>
+    <div class="img"><img src="../static/images/retina/index-bg05@2x.jpg"/></div>
+</section>
+<section class="hm-product hm-product-app">
+    <div class="img"><img src="../static/images/retina/index-bg06@2x.jpg" width="85%" height="auto"/></div>
+    <div class="txt">
+        <p>{{text.own_app|raw}}</p>
+        <p style="margin-top: 30px;">{{text.app_notification|raw}}<sup><a href="#comment2"> 2</a></sup>{{text.app_track_amber|raw}}</p>
+    </div>
+</section>
+<section class="hm-product hm-product-look">
+    <div class="looks-amber">
+        <ul>
+            <li class="ab1"></li>
+            <li class="ab2"></li>
+            <li class="ab3"></li>
+            <li class="ab4"></li>
+        </ul>
+    </div>
+    <div class="txt">{{text.look_at_amber}}</div>
+</section>
+<aside class="hm-product-introduction">
+    <div class="inner-intro">
+        <a name="comment1"></a><p>{{text.footer1|replace({"<a>":"<a class='footer' href='set-up.html'>"})|raw}} </p>
+        <a name="comment2"></a><p>{{text.footer2|replace({"<a>":"<a class='footer' href='app.html'>"})|raw}} </p>
+    </div>
+</aside>
+<script type="text/javascript" src="../static/js/slide.js"></script>
+<script>
+    var wHeight = $(window).height();
+    function setHeight(wh){
+        var amberHeight = wh>=580&&wh<=955?wh:(wh<580?580:955);
+        $("#amberSlider").height(amberHeight);
+    }
+    setHeight(wHeight);
+
+    $(window).resize(function(){
+        wHeight = $(window).height();
+        setHeight(wHeight);
+    })
+</script>
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+{% include 'amber/footer.html' %}
+</body>
+</html>

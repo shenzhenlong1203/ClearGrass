@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary</title>
+</head>
+<body>
+    <form>
+        <input name="fromDate" value="{{fromDate}}">  ~ <input name="toDate" value="{{toDate}}">
+        <input value="filter" type="submit">
+    </form>
+    <table border="1">
+        <thead>
+        <tr>
+            {% for key,value in gapCount %}
+            <td>{{key}}</td>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for key,value in gapCount %}
+            <td>{{value}}</td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+    <table border="1">
+        <thead>
+        <tr>
+            {% for key,value in monthCount %}
+            <td>{{key}}</td>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for key,value in monthCount %}
+            <td>{{value}}</td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="">导出指定范围</a> <a>导出全部数据</a>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>email</td>
+            <td>time</td>
+            <td>watch type</td>
+            <td>watch size</td>
+            <td>country</td>
+            <td>city</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for value in data %}
+        <tr>
+            <td> {{ value.email }} </td>
+            <td> {{ value.timestamp }}
+            <td> {{ value.watch_type }} </td>
+            <td> {{ value.watch_size }} </td>
+            <td> {{ value.country }} </td>
+            <td> {{ value.city }} </td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

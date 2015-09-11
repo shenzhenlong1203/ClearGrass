@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{text.page_title}} - {{text.cleargrass}}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="../static/style/grass.css?var=0904">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% include 'html_head.html' %}
+</head>
+<body class="home-page">
+{% include 'amber/header.html' %}
+<section id="app-main">
+    <div class="app-introduction">
+        <h2>{{text.amber_ios_app}}</h2>
+        <div class="app-intro-slider clearfix" id="app-intro-slider" style="height: 720px;overflow: hidden;">
+            <ul class="sliderbox" style="position: relative;">
+                <li class="s1 item" style="display: block;">
+                    <figure class="image-app-phone1"></figure>
+                    <div class="intro">
+                        <h3>{{text.get_notifications|raw}}</h3>
+                        <ul>
+                            <li>{{text.get_notifications_1|raw}}</li>
+                            <li>{{text.get_notifications_2|raw}}</li>
+                            <li>{{text.get_notifications_3|raw}}</li>
+                            <li>{{text.get_notifications_4|raw}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="s2 item" style="display: block;">
+                    <figure class="image-app-phone2"></figure>
+                    <div class="intro">
+                        <h3>{{text.check_amber_status}}</h3>
+                        <ul>
+                            <li>{{text.check_status_1}}</li>
+                            <li>{{text.check_status_2}}</li>
+                            <li>{{text.check_status_3}}</li>
+                            <li>{{text.check_status_4}}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="s3 item" style="display: block;">
+                    <figure class="image-app-phone3"></figure>
+                    <div class="intro">
+                        <h3>{{text.track_amber}}</h3>
+                    </div>
+                </li>
+            </ul>
+            <div class="slidernav"></div>
+        </div>
+        <h4>{{text.available_app_store|raw}}</h4>
+        <p class="note-bd">{{text.install_app_to_use|raw}}</p>
+    </div>
+</section>
+{% include 'amber/footer.html' %}
+<script type="text/javascript" src="../static/js/power-slider.js"></script>
+<script>
+    $(function(){
+        $("#app-intro-slider").powerSlider({
+            sliderNum:1,
+            peed:600,
+            delayTime:6000,
+            clickMode:"mouseover",
+            Nav: true
+        });
+    })
+</script>
+
+</body>
+</html>

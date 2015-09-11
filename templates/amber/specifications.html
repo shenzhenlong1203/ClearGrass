@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{text.page_title}} - {{text.cleargrass}}</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
+    <link type="text/css" rel="stylesheet" href="../static/style/grass.css?var=0904">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% include 'html_head.html' %}
+</head>
+<body class="home-page">
+{% include 'amber/header.html' %}
+<section id="specitications-intro">
+    <div class="spec-line clearfix">
+        <label class="title">{{text.color}}</label>
+        <div class="cot spec-photo">
+            <ul>
+                <li><img src="../static/images/retina/specification-a@2x.jpg" width="202" height="180"></li>
+                <li><img src="../static/images/retina/specification-b@2x.jpg" width="202" height="180"></li>
+                <li><img src="../static/images/retina/specification-c@2x.jpg" width="202" height="180"></li>
+                <li><img src="../static/images/retina/specification-d@2x.jpg" width="202" height="180"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.power_in}}</label>
+        <div class="cot">{{text.power_in_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.power_out_1}}</label>
+        <div class="cot">{{text.power_out_1_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.power_out_2}}</label>
+        <div class="cot">{{text.power_out_2_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.battery}}</label>
+        <div class="cot">{{text.battery_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.height}}</label>
+        <div class="cot">{{text.height_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.width}}</label>
+        <div class="cot">{{text.width_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.weight}}</label>
+        <div class="cot">{{text.weight_data}}</div>
+    </div>
+    <div class="spec-line clearfix">
+        <label class="title">{{text.material}}</label>
+        <div class="cot">{{text.material_data}}</div>
+    </div>
+</section>
+{% include 'amber/footer.html' %}
+</body>
+</html>

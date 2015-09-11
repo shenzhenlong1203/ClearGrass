@@ -1,0 +1,43 @@
+<header id="header">
+    <div class="guide">
+        <div class="guide-content">
+            <h1><a href="/"><img src="../static/images/{{text.current_language}}/logo.png" width="140" height="22"/></a></h1>
+            <div class="pd-list">
+                <a href="/">{{ text.amber }}</a>
+            </div>
+            <span class="note">{{ text.more_products_coming }}</span>
+            <div class="language">
+                <a href="mailto:support@cleargrass.com">{{ text.contact_us }}</a>
+                <a href="#" class="language">{{ text.other_language }}</a>
+            </div>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-list">
+                <ul>
+                    <li><a href="style" class="{{ page == 'style' ? 'active': '' }}">{{ text.style }}</a></li>
+                    <li><a href="set-up" class="{{ page == 'set-up' ? 'active': '' }}">{{ text.set_up }}</a></li>
+                    <li><a href="charging" class="{{ page == 'charging' ? 'active': '' }}">{{ text.charging }}</a></li>
+                    <li><a href="specifications" class="{{ page == 'specifications' ? 'active': '' }}">{{ text.specifications }}</a></li>
+                    <li><a href="app" class="{{ page == 'app' ? 'active': '' }}">{{ text.app }}</a></li>
+                    {% if page == 'subscribe'  %}
+                    <li><a class='active'>{{ text.subscribe }}</a></li>
+                    {% endif %}
+                </ul>
+                <div class="mailto"{{ page == 'subscribe' ? ' style="display: none"': '' }}>
+                    <input type="text" placeholder="{{text.hint_email}}" id="input-sub">
+                    <button id="maile-subscribe" >{{ text.subscribe }}</button>
+                </div>
+            </div>
+            <div class="share">
+                <ul>
+                    <li><a target="_blank" href="https://www.facebook.com/amber4applewatch" class="facebook"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/Amber4theWatch" class="twitter"></a></li>
+                    <li><a target="_blank" href="https://instagram.com/amber4applewatch/" class="camara"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+</header>
